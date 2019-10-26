@@ -24,10 +24,9 @@ class MovieDetailsActivity : AppCompatActivity() {
 
     private fun fetchJson() {
         val movieId = intent.getIntExtra(CustomViewHolder.MOVIE_ID_KEY, -1)
-        val movieTitle = intent.getStringExtra(CustomViewHolder.MOVIE_TITLE_KEY)
-        val movieReselaseDate = intent.getStringExtra(CustomViewHolder.MOVIE_RELEASE_DATE_KEY)
 
-        val movieDetailsUrl = "https://api.themoviedb.org/3/movie/${movieId}?api_key=${MainActivity.API_KEY}"
+        val movieDetailsUrl =
+            "https://api.themoviedb.org/3/movie/${movieId}?api_key=${MainActivity.API_KEY}"
         val client = OkHttpClient()
         val request = Request.Builder().url(movieDetailsUrl).build()
 

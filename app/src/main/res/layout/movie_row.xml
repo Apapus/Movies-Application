@@ -60,7 +60,7 @@
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:background="1C1B20"
+        android:background="#1C1B20"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
