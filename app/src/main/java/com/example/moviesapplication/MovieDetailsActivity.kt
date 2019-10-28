@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.moviesapplication.models.MovieDetail
 import com.google.gson.GsonBuilder
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_movie_details.*
 import okhttp3.*
 import java.io.IOException
 
@@ -16,7 +16,8 @@ class MovieDetailsActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        recyclerView_main.layoutManager = LinearLayoutManager(this)
+        recyclerView_movie_details.layoutManager = LinearLayoutManager(this)
+
 
         fetchJson()
 
@@ -41,7 +42,7 @@ class MovieDetailsActivity : AppCompatActivity() {
                 val movieDetails = gson.fromJson(body, MovieDetail::class.java)
 
                 runOnUiThread {
-                    recyclerView_main.adapter = MovieDetailsAdapter(movieDetails)
+                    recyclerView_movie_details.adapter = MovieDetailsAdapter(movieDetails)
                 }
             }
         })

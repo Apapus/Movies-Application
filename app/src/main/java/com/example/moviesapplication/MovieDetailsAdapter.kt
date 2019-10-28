@@ -9,7 +9,7 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_movie_details.view.*
 import kotlinx.android.synthetic.main.movie_row.view.*
 
-class MovieDetailsAdapter(val movieDetail: MovieDetail?) : RecyclerView.Adapter<MovieDetailsViewHolder>() {
+class MovieDetailsAdapter(private val movieDetail: MovieDetail?) : RecyclerView.Adapter<MovieDetailsViewHolder>() {
 
     override fun onBindViewHolder(holder: MovieDetailsViewHolder, position: Int) {
 
@@ -25,13 +25,13 @@ class MovieDetailsAdapter(val movieDetail: MovieDetail?) : RecyclerView.Adapter<
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieDetailsViewHolder {
 
         val layoutInflater = LayoutInflater.from(parent.context)
-        val customView = layoutInflater.inflate(R.layout.activity_movie_details, parent, false)
+        val customView = layoutInflater.inflate(R.layout.movie_row, parent, false)
 
         return MovieDetailsViewHolder(customView)
     }
 
     override fun getItemCount(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return 1
     }
 
 
