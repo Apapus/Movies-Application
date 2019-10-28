@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="120dp"
     android:background="#1C1B20">
 
     <ImageView
         android:id="@+id/imageView_movie_poster"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
         app:layout_constraintDimensionRatio="h,9:16"
         app:layout_constraintEnd_toStartOf="@+id/textView_movie_title"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,6 +21,8 @@
         android:layout_height="wrap_content"
         android:text="Movie Title"
         android:textColor="#FFFFFF"
+        android:layout_marginTop="31dp"
+        android:layout_marginLeft="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView_movie_poster"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,19 +33,24 @@
         android:layout_height="wrap_content"
         android:text="Year - Director Name"
         android:textColor="#D5D5D5"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        android:layout_marginTop="53dp"
+        android:layout_marginBottom="52dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView_movie_poster"
-        app:layout_constraintTop_toBottomOf="@+id/textView_movie_title" />
+        app:layout_constraintTop_toBottomOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/imageView_star"
+        android:layout_width="12.36dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="7.32dp"
+        android:layout_marginLeft="16dp"
         app:layout_constraintEnd_toStartOf="@+id/textView_movie_rating"
         app:layout_constraintStart_toEndOf="@+id/imageView_movie_poster"
         app:layout_constraintTop_toBottomOf="@+id/textView_movie_details"
-        app:srcCompat="@android:drawable/btn_star_big_on" />
+        android:src="@drawable/star" />
 
     <TextView
         android:id="@+id/textView_movie_rating"
@@ -52,12 +58,14 @@
         android:layout_height="wrap_content"
         android:text="Movie Rating"
         android:textColor="#FFFFFF"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="42dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/imageView_movie_poster"
         app:layout_constraintTop_toBottomOf="@+id/textView_movie_details" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView_line"
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:background="#1C1B20"
