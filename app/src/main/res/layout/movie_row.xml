@@ -25,7 +25,8 @@
         android:layout_marginLeft="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView_movie_poster"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp" />
 
     <TextView
         android:id="@+id/textView_movie_details"
@@ -39,7 +40,8 @@
         app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView_movie_poster"
-        app:layout_constraintTop_toBottomOf="parent" />
+        app:layout_constraintTop_toBottomOf="parent"
+        android:layout_marginStart="16dp" />
 
     <ImageView
         android:id="@+id/imageView_star"
@@ -50,7 +52,8 @@
         app:layout_constraintEnd_toStartOf="@+id/textView_movie_rating"
         app:layout_constraintStart_toEndOf="@+id/imageView_movie_poster"
         app:layout_constraintTop_toBottomOf="@+id/textView_movie_details"
-        android:src="@drawable/star" />
+        android:src="@drawable/star"
+        android:layout_marginStart="16dp" />
 
     <TextView
         android:id="@+id/textView_movie_rating"
@@ -62,7 +65,8 @@
         android:layout_marginLeft="42dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView_movie_poster"
-        app:layout_constraintTop_toBottomOf="@+id/textView_movie_details" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_movie_details"
+        android:layout_marginStart="42dp" />
 
     <TextView
         android:id="@+id/textView_line"
