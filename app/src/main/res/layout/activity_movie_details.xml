@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -9,21 +10,19 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="#26252D"
-        android:fontFamily="Roboto"
-        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView_details_movie_image"
+        android:id="@+id/imageView3"
         android:layout_width="0dp"
-        android:layout_height="299dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/recyclerView"
-        android:src="@drawable/ic_launcher_background" />
+        app:srcCompat="@drawable/ic_launcher_background" />
 
     <TextView
         android:id="@+id/textView_details_movie_title"
@@ -33,14 +32,11 @@
         android:layout_marginLeft="17dp"
         android:layout_marginEnd="17dp"
         android:layout_marginRight="17dp"
-        android:layout_marginBottom="56dp"
         android:text="Movie Title"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:textFontWeight="900"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView_details_movie_image"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <TextView
         android:id="@+id/textView_details_director"
@@ -50,14 +46,11 @@
         android:layout_marginLeft="17dp"
         android:layout_marginEnd="17dp"
         android:layout_marginRight="17dp"
-        android:layout_marginBottom="24dp"
-        android:text="by Director Name"
+        android:text="Director Name"
         android:textColor="#D0D0D0"
-        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_details_movie_title"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView_details_movie_image" />/>
+        app:layout_constraintTop_toBottomOf="@+id/textView_details_movie_title" />
 
     <TextView
         android:id="@+id/textView_details_movie_duration"
@@ -65,14 +58,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:layout_marginLeft="17dp"
-        android:layout_marginTop="23dp"
         android:layout_marginEnd="17dp"
-        android:layout_marginRight="202dp"
-        android:text="Date and Duration"
+        android:layout_marginRight="17dp"
+        android:text="TextView"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_details_movie_image" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_details_director" />
 
     <TextView
         android:id="@+id/textView_line"
@@ -82,7 +74,6 @@
         android:layout_marginLeft="17dp"
         android:layout_marginEnd="17dp"
         android:layout_marginRight="17dp"
-        android:layout_marginTop="20dp"
         android:background="#5E5E66"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/recyclerView"
@@ -96,7 +87,6 @@
         android:layout_marginLeft="17dp"
         android:layout_marginEnd="17dp"
         android:layout_marginRight="17dp"
-        android:layout_marginTop="18dp"
         android:text="Description"
         android:textColor="#D7D7D7"
         app:layout_constraintEnd_toEndOf="parent"
@@ -111,10 +101,9 @@
         android:layout_marginLeft="17dp"
         android:layout_marginEnd="17dp"
         android:layout_marginRight="17dp"
-        android:layout_marginTop="135dp"
         android:background="#5E5E66"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/recyclerView"
-        app:layout_constraintTop_toBottomOf="@+id/textView_details_movie_duration" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_details_movie_description" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

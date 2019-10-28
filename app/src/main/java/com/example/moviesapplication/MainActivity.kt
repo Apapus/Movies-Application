@@ -1,7 +1,7 @@
 package com.example.moviesapplication
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.moviesapplication.models.HomeFeed
 import com.google.gson.GsonBuilder
@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
         recyclerView_main.layoutManager = LinearLayoutManager(this)
 
         fetchJson()
-
         // TODO("fetch director name")
     }
 
