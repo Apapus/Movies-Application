@@ -10,23 +10,23 @@ import com.example.moviesapplication.models.Movie
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.movie_row.view.*
 
-class MainAdapter(private val homeFeed: HomeFeed) : RecyclerView.Adapter<CustomViewHolder>() {
+class MainAdapter(private val homeFeed: HomeFeed) : RecyclerView.Adapter<MainViewHolder>() {
 
     companion object {
         const val IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w185"
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val cellForRow = layoutInflater.inflate(R.layout.movie_row, parent, false)
-        return CustomViewHolder(cellForRow)
+        return MainViewHolder(cellForRow)
     }
 
     override fun getItemCount(): Int {
         return homeFeed.results.size
     }
 
-    override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
         val movie = homeFeed.results[position]
         val posterPath = movie.poster_path
         val posterImageUrl = "${IMAGE_BASE_URL}${posterPath}"
@@ -44,7 +44,7 @@ class MainAdapter(private val homeFeed: HomeFeed) : RecyclerView.Adapter<CustomV
 
 }
 
-class CustomViewHolder(val view: View, var movie: Movie? = null) : RecyclerView.ViewHolder(view) {
+class MainViewHolder(val view: View, var movie: Movie? = null) : RecyclerView.ViewHolder(view) {
 
     companion object {
         const val MOVIE_TITLE_KEY = "MOVIE_TITLE"

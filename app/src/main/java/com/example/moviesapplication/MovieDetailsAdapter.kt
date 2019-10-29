@@ -10,12 +10,13 @@ class MovieDetailsAdapter(private val movieDetail: MovieDetail?) : RecyclerView.
 
     override fun onBindViewHolder(holder: MovieDetailsViewHolder, position: Int) {
 
-//        holder.movieDetailsView.textView_movie_title.text = CustomViewHolder.MOVIE_TITLE_KEY
-//        holder.movieDetailsView.textView_details_movie_duration.text = CustomViewHolder.MOVIE_RELEASE_DATE_KEY + " * " + movieDetail?.runtime
-//        holder.movieDetailsView.textView_details_movie_description.text = CustomViewHolder.MOVIE_DESCRIPTION_KEY
+
+//        holder.movieDetailsView.textView_movie_title.text = MainViewHolder.MOVIE_TITLE_KEY
+//        holder.movieDetailsView.textView_details_movie_duration.text = MainViewHolder.MOVIE_RELEASE_DATE_KEY + " * " + movieDetail?.runtime
+//        holder.movieDetailsView.textView_details_movie_description.text = MainViewHolder.MOVIE_DESCRIPTION_KEY
 
 //        val moviePoster = holder.movieDetailsView.imageView_movie_poster
-//        val posterUrl = MainAdapter.IMAGE_BASE_URL + movieDetail?.poster_path
+//        val posterUrl = MainAdapter.IMAGE_BASE_URL + movieDetail?.backdrop_path
 //        Picasso.get().load(posterUrl).into(moviePoster)
     }
 
@@ -34,6 +35,6 @@ class MovieDetailsAdapter(private val movieDetail: MovieDetail?) : RecyclerView.
 
 }
 
-class MovieDetailsViewHolder(movieDetailsView: View) : RecyclerView.ViewHolder(movieDetailsView) {
+class MovieDetailsViewHolder(val movieDetailsView: View) : RecyclerView.ViewHolder(movieDetailsView) {
 
 }
